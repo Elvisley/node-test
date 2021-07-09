@@ -1,6 +1,4 @@
 apiVersion: apps/v1
-# StatefulSets intestead of Deployments for persistent data
-# https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 kind: StatefulSet
 metadata:
   name: elasticsearch
@@ -15,8 +13,8 @@ spec:
         app: elasticsearch
     spec:
       containers:
-      - name: elasticsearch
-        image: docker.elastic.co/elasticsearch/elasticsearch:6.6.1
+      - image: docker.elastic.co/elasticsearch/elasticsearch:6.6.1
+        name: elasticsearch
         env:
         - name: discovery.type
           value: single-node
