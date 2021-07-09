@@ -75,9 +75,7 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelector: {
-   app: node-app
-}
+nodeSelector: {}
 
 tolerations: []
 
