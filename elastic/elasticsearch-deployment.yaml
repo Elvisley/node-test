@@ -1,22 +1,21 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
+apiVersion: apps/v1
+kind: StatefulSet
 metadata:
-  name: elasticsearch-ui
-  namespace: default
+  name: elasticsearch
 spec:
-  project: default
+  serviceName: elasticsearch
   replicas: 1
   selector:
     matchLabels:
-      app: elasticsearch-ui
+      app: elasticsearch
   template:
     metadata:
       labels:
-        app: elasticsearch-ui
+        app: elasticsearch
     spec:
       containers:
       - image: docker.elastic.co/elasticsearch/elasticsearch:6.6.1
-        name: elasticsearch-ui
+        name: elasticsearch
         env:
         - name: discovery.type
           value: single-node
