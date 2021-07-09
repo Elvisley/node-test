@@ -18,6 +18,11 @@ spec:
       - name: node-app
         image: node-web-app-tutorial:latest
         imagePullPolicy: IfNotPresent
+        env:
+        - name: APM_SERVICE_NAME
+          value: "NODE_TEST_ENV"
+        - name: APM_SERVER_URL
+          value: "http://apm-server:8200"
         ports:
         - containerPort: 3000
           name: webinterface
