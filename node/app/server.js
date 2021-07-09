@@ -10,6 +10,9 @@ if (!process.env.APM_SERVER_URL) {
   console.log('APM_SERVER_URL not exist')
 }
 
+console.info('APM_SERVICE_NAME', process.env.APM_SERVICE_NAME)
+console.info('APM_SERVER_URL', process.env.APM_SERVER_URL)
+
 // Add this to the VERY top of the first file loaded in your app
 const apm = require('elastic-apm-node').start({
     // Override service name from package.json
