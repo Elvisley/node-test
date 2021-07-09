@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: IfNotPresent
         env:
         - name: APM_SERVICE_NAME
-          value: "NODE_TEST_ENV"
+          value: "NODE_TEST_ARGOCD"
         - name: APM_SERVER_URL
           value: "http://apm-server:8200"
         ports:
