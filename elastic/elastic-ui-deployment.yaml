@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: elasticsearch
+  name: elasticsearch-ui
 spec:
   project: default
   replicas: 1
   selector:
     matchLabels:
-      app: elasticsearch
+      app: elasticsearch-ui
   template:
     metadata:
       labels:
-        app: elasticsearch
+        app: elasticsearch-ui
     spec:
       containers:
       - image: docker.elastic.co/elasticsearch/elasticsearch:6.6.1
-        name: elasticsearch
+        name: elasticsearch-ui
         env:
         - name: discovery.type
           value: single-node
