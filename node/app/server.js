@@ -3,11 +3,11 @@
 require('dotenv/config');
 
 if (!process.env.APM_SERVICE_NAME) {
-  console.log('APM_SERVICE_NAME not exist')
+  console.error('APM_SERVICE_NAME not exist')
 }
 
 if (!process.env.APM_SERVER_URL) {
-  console.log('APM_SERVER_URL not exist')
+  console.error('APM_SERVER_URL not exist')
 }
 
 console.info('APM_SERVICE_NAME', process.env.APM_SERVICE_NAME)
