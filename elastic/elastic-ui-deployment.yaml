@@ -1,7 +1,8 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
   name: elasticsearch-ui
+  namespace: default
 spec:
   project: default
   replicas: 1
