@@ -82,5 +82,5 @@ tolerations: []
 affinity: {}
 
 env:          
- APM_SERVICE_NAME: "NODE_LAST"
+ APM_SERVICE_NAME: "NODE_ARCOCD"
  APM_SERVER_URL: "http://apm-server:8200"
